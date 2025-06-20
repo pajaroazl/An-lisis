@@ -1,9 +1,13 @@
+const chess = new Chess();
+
 const board = Chessboard('board2', {
-  draggable: false,
+  draggable: true,
   position: 'start',
+  onDrop: onDrop,
+  onSnapEnd: onSnapEnd,
 });
 
-const chess = new Chess();
+
 
 const variants = {
   'Giuoco Piano': ['e4', 'e5', 'Nf3', 'Nc6', 'Bc4', 'Bc5'],
@@ -66,3 +70,28 @@ document.getElementById('autoBtn').addEventListener('click', () => {
     btn.textContent = 'Detener';
   }
 });
+
+function onDrop(source, target) {
+  const move = chess.move({
+    from: source,
+    to: target,
+    promotion: 'q'
+  });
+
+}
+
+function updateMoveDisplay() {
+  const moveList = chess.history({ verbose: true });
+  const moveText = moveList
+    .map((move, idx) => {
+      const turn = Math.floor(idx / 2) + 1;
+      return idx % 2 === 0
+        ? `${turn}. ${move.san}`
+        : `${move.san}`;
+    })
+    .join(' ');
+  document.getElementById('moveDisplay').textContent = moveText;
+}
+function onSnapEnd() {
+  board.position(chess.fen()); // actualiza y "desengancha" la pieza
+}
