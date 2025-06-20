@@ -91,3 +91,89 @@ body {
 .subida {
   animation: subirAnimado 0.6s ease-in-out;
 }
+
+body {
+  background: linear-gradient(#3b2f2f, #1f1a17);
+  color: #f5eee6;
+  font-family: 'Georgia', serif;
+  font-size: 22px;
+  padding: 30px;
+}
+
+/* Contenedor de la lista */
+#openingList {
+  background-color: #4a3628;
+  border: 5px solid #2e1e13;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  max-height: 75vh;
+  overflow-y: auto;
+}
+
+/* Apertura principal */
+.opening {
+  font-weight: bold;
+  font-size: 1.8em;
+  margin-top: 35px;
+  padding: 10px 15px;
+  color: #fce5b6;
+  border-bottom: 3px solid #7d5a3d;
+}
+
+/* Subvariantes */
+.subvariant {
+  background-color: #6f4d37;
+  padding: 14px 20px;
+  margin: 8px 20px;
+  border-radius: 8px;
+  font-size: 1.4em;
+  cursor: pointer;
+  color: #f7ede2;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.subvariant:hover {
+  background-color: #85644e;
+  transform: scale(1.04);
+}
+
+/* Variaciones */
+.variation {
+  font-style: italic;
+  font-size: 1.1em;
+  padding: 6px 35px;
+  color: #e3d3be;
+  margin-bottom: 14px;
+  border-left: 4px solid #a3836f;
+}
+
+/* Animación para subidas */
+@keyframes subirAnimado {
+  0% {
+    background-color: #f7d47d;
+    transform: scale(1.06);
+  }
+  100% {
+    background-color: #6f4d37;
+    transform: scale(1);
+  }
+}
+.subida {
+  animation: subirAnimado 0.6s ease-in-out;
+}
+
+/* Scrollbar más grande y cómodo */
+#openingList::-webkit-scrollbar {
+  width: 14px;
+}
+#openingList::-webkit-scrollbar-track {
+  background: #3a2921;
+}
+#openingList::-webkit-scrollbar-thumb {
+  background-color: #b1926c;
+  border-radius: 7px;
+}
+
+#openingList {
+  max-width: 60vh; /* o lo que consideres cómodo */
+}
