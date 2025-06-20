@@ -7,35 +7,52 @@ const board = Chessboard('board2', {
   onSnapEnd: onSnapEnd,
 });
 
-
-
-const variants = {
-  'Giuoco Piano': ['e4', 'e5', 'Nf3', 'Nc6', 'Bc4', 'Bc5'],
-  'Evans Gambit': ['e4', 'e5', 'Nf3', 'Nc6', 'Bc4', 'Bc5', 'b4'],
-  'Two Knights Defense': ['e4', 'e5', 'Nf3', 'Nc6', 'Bc4', 'Nf6'],
-};
-
+let openings = {};
 let currentMoves = [];
 let currentIndex = 0;
 let interval = null;
+const variants = {};
+const listContainer = document.getElementById('openingList');
 
-function updateBoard() {
-  chess.reset();
-  for (let i = 0; i <= currentIndex; i++) {
-    chess.move(currentMoves[i]);
-  }
-  board.position(chess.fen());
+// 📥 Cargar aperturas desde archivo JSON
+fetch('aperturas.json')
+  .then(response => response.json())
+  .then(data => {
+    openings = data;
+    renderOpenings();
+  })
+  .catch(error => {
+    console.error('Error al cargar aperturas:', error);
+  });
+
+// 📋 Generar lista de aperturas dinámicamente
+function renderOpenings() {
+  listContainer.innerHTML = '';
+
+  Object.entries(openings).forEach(([openingName, subvars]) => {
+    const openingEl = document.createElement('div');
+    openingEl.className = 'opening';
+    openingEl.textContent = openingName;
+    listContainer.appendChild(openingEl);
+
+    Object.entries(subvars).forEach(([subName, moves]) => {
+      const subEl = document.createElement('div');
+      subEl.className = 'subvariant';
+      subEl.textContent = subName;
+      subEl.dataset.variant = subName;
+      listContainer.appendChild(subEl);
+
+      const varEl = document.createElement('div');
+      varEl.className = 'variation';
+      varEl.textContent = `Movimientos: ${moves.join(', ')}`;
+      listContainer.appendChild(varEl);
+
+      variants[subName] = moves;
+    });
+  });
 }
 
-document.querySelectorAll('.variant').forEach((btn) => {
-  btn.addEventListener('click', () => {
-    const name = btn.getAttribute('data-variant');
-    currentMoves = variants[name];
-    currentIndex = 0;
-    updateBoard();
-  });
-});
-
+// 🎯 Navegación manual
 document.getElementById('nextBtn').addEventListener('click', () => {
   if (currentIndex < currentMoves.length - 1) {
     currentIndex++;
@@ -50,6 +67,7 @@ document.getElementById('prevBtn').addEventListener('click', () => {
   }
 });
 
+// 🔁 Modo automático
 document.getElementById('autoBtn').addEventListener('click', () => {
   const btn = document.getElementById('autoBtn');
   if (interval) {
@@ -71,27 +89,28 @@ document.getElementById('autoBtn').addEventListener('click', () => {
   }
 });
 
+// 🧩 Selección de subvariante
+listContainer.addEventListener('click', (e) => {
+  if (e.target.classList.contains('subvariant')) {
+    const name = e.target.dataset.variant;
+    currentMoves = variants[name];
+    currentIndex = 0;
+    updateBoard();
+  }
+});
+
 function onDrop(source, target) {
-  const move = chess.move({
-    from: source,
-    to: target,
-    promotion: 'q'
-  });
-
+  chess.move({ from: source, to: target, promotion: 'q' });
 }
 
-function updateMoveDisplay() {
-  const moveList = chess.history({ verbose: true });
-  const moveText = moveList
-    .map((move, idx) => {
-      const turn = Math.floor(idx / 2) + 1;
-      return idx % 2 === 0
-        ? `${turn}. ${move.san}`
-        : `${move.san}`;
-    })
-    .join(' ');
-  document.getElementById('moveDisplay').textContent = moveText;
-}
 function onSnapEnd() {
-  board.position(chess.fen()); // actualiza y "desengancha" la pieza
+  board.position(chess.fen());
+}
+
+function updateBoard() {
+  chess.reset();
+  for (let i = 0; i <= currentIndex; i++) {
+    chess.move(currentMoves[i]);
+  }
+  board.position(chess.fen());
 }

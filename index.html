@@ -9,30 +9,13 @@
       href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
-    <style>
-      body {
-        display: flex;
-        justify-content: center;
-        margin-top: 50px;
-      }
-    </style>
   </head>
   <body>
     <div class="container">
       <div id="board2" style="width: 400px"></div>
-
       <div id="sidebar">
-        <strong>Variantes de la Defensa Italiana</strong>
-        <button class="variant" data-variant="Giuoco Piano">
-          Giuoco Piano
-        </button>
-        <button class="variant" data-variant="Evans Gambit">
-          Evans Gambit
-        </button>
-        <button class="variant" data-variant="Two Knights Defense">
-          Dos Caballos
-        </button>
-
+        <strong>Explorador de Aperturas</strong>
+        <div id="openingList"></div>
         <div class="controls">
           <button id="prevBtn">⬅️ Anterior</button>
           <button id="nextBtn">Siguiente ➡️</button>
@@ -44,7 +27,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
-
     <script src="script.js"></script>
   </body>
 </html>

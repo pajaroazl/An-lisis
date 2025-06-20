@@ -1,0 +1,47 @@
+{
+  "Apertura Italiana": {
+    "Giuoco Piano - Variante Principal": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5"],
+    "Giuoco Piano - Variante Moeller": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "c3", "Nf6", "d4", "exd4", "cxd4", "Bb4+"],
+    "Giuoco Piano - Variante Greco": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "c3", "Nf6", "d4", "exd4", "cxd4", "Bb4+", "Nc3", "Nxe4"],
+    "Giuoco Piano - Variante Canal": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "c3", "Nf6", "d4", "exd4", "e5"],
+    "Giuoco Piano - Variante Dubois": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "c3", "f5"],
+    "Giuoco Piano - Variante Lasker": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "c3", "Nf6", "d4", "exd4", "e5", "d5"],
+    "Giuoco Piano - Variante Polerio": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "c3", "Nf6", "d4", "exd4", "e5", "d5", "Bb5", "Ne4"],
+    "Giuoco Piano - Variante Rosentreter": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "c3", "Nf6", "d4", "exd4", "e5", "d5", "Bb5", "Ne4", "cxd4"],
+    "Giuoco Pianissimo - Variante Clásica": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "d3", "Nf6", "O-O", "d6"],
+    "Giuoco Pianissimo - Variante con a4": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "d3", "Nf6", "O-O", "d6", "a4"],
+
+    "Evans Gambit - Variante Principal": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "b4"],
+    "Evans Gambit - Variante Anderssen": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "b4", "Bxb4", "c3", "Ba5", "d4", "exd4", "O-O"],
+    "Evans Gambit - Variante Tartakower": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "b4", "Bxb4", "c3", "Ba5", "d4", "exd4", "O-O", "Nf6", "e5", "d5"],
+    "Evans Gambit - Variante Steinitz": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "b4", "Bxb4", "c3", "Ba5", "d4", "exd4", "O-O", "Nf6", "e5", "d5", "Bb5", "Ne4"],
+    "Evans Gambit - Variante Comprometida": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "b4", "Bxb4", "c3", "Ba5", "d4", "exd4", "O-O", "dxc3"],
+    "Evans Gambit - Variante Bronstein": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "b4", "Bxb4", "c3", "Ba5", "d4", "exd4", "O-O", "Nf6", "e5", "d5", "Bb5"],
+    "Evans Gambit - Variante Mayet": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "b4", "Bxb4", "c3", "Ba5", "d4", "exd4", "Qb3"],
+    "Evans Gambit - Variante McDonnell": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "b4", "Bxb4", "c3", "Ba5", "d4", "exd4", "O-O", "d3"],
+    "Evans Gambit - Variante Stone-Ware": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "b4", "Bxb4", "c3", "Ba5", "d4", "exd4", "O-O", "Nf6", "e5"],
+    "Evans Gambit - Variante Chigorin": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "b4", "Bxb4", "c3", "Ba5", "d4", "exd4", "O-O", "Nf6", "e5", "d5", "Bb5", "Ne4"],
+
+    "Dos Caballos - Fegatello (Fried Liver)": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Nf6", "Ng5", "d5", "exd5", "Nxd5", "Nxf7"],
+    "Dos Caballos - Variante Lolli": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Nf6", "Ng5", "d5", "exd5", "Na5"],
+    "Dos Caballos - Variante Fritz": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Nf6", "d4", "exd4", "e5"],
+    "Dos Caballos - Variante Traxler": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Nf6", "Ng5", "Bc5"],
+    "Dos Caballos - Variante Ulvestad": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Nf6", "Ng5", "d5", "exd5", "b5"],
+    "Dos Caballos - Variante Moderno": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Nf6", "d3"],
+    "Dos Caballos - Variante Polerio": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Nf6", "Ng5", "d5", "exd5", "Na5", "Bb5+"],
+    "Dos Caballos - Variante Hübner": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Nf6", "Ng5", "d5", "exd5", "Nd4"],
+    "Dos Caballos - Variante Bogoljubov": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Nf6", "Ng5", "d5", "exd5", "Na5", "Bb5+", "c6"],
+    "Dos Caballos - Variante con O-O y d4": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Nf6", "O-O", "Bc5", "d4"],
+
+    "Gambito Jerome": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "Bxf7+", "Kxf7", "Nxe5+"],
+    "Gambito Rousseau": ["e4", "e5", "Nf3", "Nc6", "Bc4", "f5"],
+    "Gambito Blackburne Shilling": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Nd4"],
+       "Variante Semiitaliana": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "Nc3"],
+    "Variante Semiitaliana con d3": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "Nc3", "Nf6", "d3"],
+    "Variante Italiana Cerrada": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "d3", "Nf6", "O-O", "d6"],
+    "Variante Italiana con h3": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "c3", "Nf6", "d3", "d6", "h3"],
+    "Giuoco Pianissimo - Variante con c3 y Qe2": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "c3", "Nf6", "Qe2"],
+    "Dos Caballos - Variante con h4": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Nf6", "Ng5", "d5", "exd5", "Na5", "h4"],
+    "Evans Gambit - Variante con Qb3": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "b4", "Bxb4", "c3", "Ba5", "Qb3"]
+  }
+}

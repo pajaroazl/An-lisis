@@ -2,37 +2,9 @@ body {
   background: #f5f7fa;
   font-family: 'Segoe UI', sans-serif;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
   padding: 40px;
   color: #333;
-}
-
-#board2 {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  margin: 5px;
-  font-size: 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-button:active {
-  transform: scale(0.98);
 }
 
 .container {
@@ -41,23 +13,38 @@ button:active {
   align-items: flex-start;
 }
 
+#board2 {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
 #sidebar {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.variant {
-  background-color: #2196F3;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 6px;
+.opening {
+  font-weight: bold;
+  margin-top: 10px;
+  color: #2e2e2e;
+}
+
+.subvariant {
+  margin-left: 20px;
+  color: #1976d2;
   cursor: pointer;
 }
 
-.variant:hover {
-  background-color: #1976D2;
+.subvariant:hover {
+  text-decoration: underline;
+}
+
+.variation {
+  margin-left: 40px;
+  color: #c2185b;
+  font-style: italic;
 }
 
 .controls button {
@@ -74,3 +61,18 @@ button:active {
   background-color: #455a64;
 }
 
+.opening {
+  font-weight: bold;
+  margin-top: 10px;
+  color: #2e2e2e;
+}
+
+.subvariant {
+  margin-left: 20px;
+  color: #1565c0;
+  cursor: pointer;
+}
+
+.subvariant:hover {
+  text-decoration: underline;
+}
